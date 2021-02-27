@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "rebuild": "node importBuilder",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "component": "node tools/create/component.js",
+    "reboot": "heroku builds:cancel -a spygameapp && heroku restart -a spygameapp"
   },
   "dependencies": {
     "lodash": "^4.17.21",
