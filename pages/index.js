@@ -59,9 +59,10 @@ const words = [
 const word = _.sample(words);
 
 export default function Home() {
-  const [playerCount, setPlayerCount] = useState(0);
+  const [playerCount, setPlayerCount] = useState(5);
+  const [spyCount, setSpyCount] = useState(1);
   const [isGame, setGame] = useState(false);
-  const [spyIndex, setSpyIndex] = useState(0);
+  const [spyIndex, setSpyIndex] = useState([]);
   const [currentPlayer, setCurrentPlayer] = useState(0);
   const [showWord, setShowWord] = useState(false);
 
@@ -81,10 +82,16 @@ export default function Home() {
             value={playerCount}
             onChange={(e) => setPlayerCount(e.target.value)}
           ></input>
+          <input
+            type="number"
+            id="count"
+            value={spyCount}
+            onChange={(e) => setSpyCount(e.target.value)}
+          ></input>
 
           <button
             onClick={() => {
-              setSpyIndex(_.random(0, _.toNumber(playerCount)));
+              setSpyIndex(_.random(0, _.toNumber(playerCount - 1)));
               setGame(true);
             }}
           >
