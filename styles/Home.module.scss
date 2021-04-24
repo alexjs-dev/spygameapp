@@ -5,16 +5,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #a4508b;
+  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+
   span {
     font-size: 3em;
     color: red;
-  }
-  button {
-    min-height: 15vh;
-    width: 100vw;
-    background: rgb(164, 228, 233);
-    font-size: 3em;
-    margin-bottom: 16px;
   }
   input {
     height: 15vh;
@@ -139,4 +135,12 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.actions {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+  grid-template-rows: 50% 50% 100%;
 }

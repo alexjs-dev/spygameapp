@@ -16,6 +16,19 @@ const words = [
   "Карнавал ",
   "Карнавал",
   "Киностудия",
+  "ресторан",
+  "кафе",
+  "столовая",
+  "бар",
+  "очко кобры",
+  "дворец",
+  "лаборатория",
+  "необитаемый остров",
+  "шахматный клуб",
+  "стрип клуб",
+  "притон героиншиков",
+  "военная база",
+  "боксерский клуб",
   "Корпоративная вечеринка",
   "Лунапарк",
   "Ночной клуб",
@@ -82,31 +95,44 @@ export default function Home() {
 
       {isGame && (
         <>
-          <button
-            onClick={() => {
-              setShowWord(true);
-            }}
-          >
-            Показать слово. Игрок {currentPlayer + 1}
-          </button>
-          <button
-            onClick={() => {
-              setShowWord(false);
-            }}
-          >
-            Спрятать
-          </button>
-          <button
-            onClick={() => {
-              setShowWord(false);
-              setCurrentPlayer(currentPlayer + 1);
-            }}
-          >
-            След игрок
-          </button>
-          {showWord && (
-            <span> {spyIndex === currentPlayer ? "Вы шпион" : word}</span>
-          )}
+          <div>
+            {showWord && (
+              <span> {spyIndex === currentPlayer ? "Вы шпион" : word}</span>
+            )}
+            <br />
+            <span style={{ textAlign: "center" }}>
+              Игрок {currentPlayer + 1}
+            </span>
+          </div>
+          <img src="/shiba.gif" alt="game" style={{ height: "20vw" }} />
+          <div className={styles.actions}>
+            <div>
+              <button
+                onClick={() => {
+                  setShowWord(true);
+                }}
+              >
+                Показать
+              </button>
+              <button
+                onClick={() => {
+                  setShowWord(false);
+                }}
+              >
+                Спрятать
+              </button>
+            </div>
+            <div>
+              <button
+                onClick={() => {
+                  setShowWord(false);
+                  setCurrentPlayer(currentPlayer + 1);
+                }}
+              >
+                След игрок
+              </button>
+            </div>
+          </div>
         </>
       )}
     </div>
