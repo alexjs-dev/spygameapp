@@ -62,7 +62,7 @@ export default function Home() {
   const [playerCount, setPlayerCount] = useState(5);
   const [spyCount, setSpyCount] = useState(1);
   const [isGame, setGame] = useState(false);
-  const [spyIndex, setSpyIndex] = useState([]);
+  const [spyIndex, setSpyIndex] = useState(0);
   const [currentPlayer, setCurrentPlayer] = useState(0);
   const [showWord, setShowWord] = useState(false);
 
@@ -82,12 +82,12 @@ export default function Home() {
             value={playerCount}
             onChange={(e) => setPlayerCount(e.target.value)}
           ></input>
-          <input
+          {/* <input
             type="number"
             id="count"
             value={spyCount}
             onChange={(e) => setSpyCount(e.target.value)}
-          ></input>
+          ></input> */}
 
           <button
             onClick={() => {
