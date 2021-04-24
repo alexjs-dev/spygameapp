@@ -101,7 +101,7 @@ export default function Home() {
             )}
             <br />
             <span style={{ textAlign: "center" }}>
-              Игрок {currentPlayer + 1}
+              Вы игрок {currentPlayer + 1}
             </span>
           </div>
           <img src="/shiba.gif" alt="game" style={{ height: "20vw" }} />
@@ -130,6 +130,16 @@ export default function Home() {
                 }}
               >
                 След игрок
+              </button>
+              <button
+                onClick={() => {
+                  // setGame(false);
+                  setShowWord(false);
+                  setCurrentPlayer(0);
+                  setSpyIndex(_.random(0, _.toNumber(playerCount)));
+                }}
+              >
+                Сброс игры
               </button>
             </div>
           </div>
