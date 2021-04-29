@@ -121,13 +121,6 @@ export default function Home() {
               >
                 Показать
               </button>
-              <button
-                onClick={() => {
-                  setShowWord(false);
-                }}
-              >
-                Спрятать
-              </button>
             </div>
             <div>
               <button
