@@ -6,7 +6,7 @@
     "dev": "next dev",
     "rebuild": "node importBuilder",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "next start",
     "component": "node tools/create/component.js",
     "reboot": "heroku builds:cancel -a spygameapp && heroku restart -a spygameapp"
   },
